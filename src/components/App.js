@@ -47,9 +47,9 @@ function Storefront() {
           <button className={activeView === "shop" ? "nav-link active" : "nav-link"} onClick={() => setActiveView("shop")}>Shop all</button>
           <button className={activeView === "wishlist" ? "nav-link active" : "nav-link"} onClick={() => setActiveView("wishlist")}>Wishlist <span className="nav-count">{wishlist.length}</span></button>
         </nav>
-        <button className="bag-link" onClick={() => document.getElementById("cart-panel").scrollIntoView({ behavior: "smooth", block: "start" })}>
+        <a className="bag-link" href="#cart-panel">
           Your bag <span className="bag-count">{itemCount}</span>
-        </button>
+        </a>
       </header>
 
       <main id="top" className="page-shell">
